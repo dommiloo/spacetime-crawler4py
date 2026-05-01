@@ -21,6 +21,10 @@ STOP_WORDS = {
     "while", "who", "whom", "why", "will", "you", "your", "yours"
 }
 
+# remove garbage tokens
+BAD_WORDS = {"pdf", "html", "http", "https", "www"}
+
+
 unique_pages = set()
 word_counts = Counter()
 subdomain_counts = defaultdict(int)
@@ -44,13 +48,12 @@ def record_page(url, html_content):
 
     soup = BeautifulSoup(html_content, "html.parser")
 
+    # remove junk tags
     for tag in soup(["script", "style", "noscript"]):
         tag.extract()
 
     text = soup.get_text(separator=" ")
     words = re.findall(r"[a-zA-Z]+", text.lower())
-
-   BAD_WORDS = {"pdf", "html", "http", "https", "www"}
 
     filtered_words = [
         word for word in words

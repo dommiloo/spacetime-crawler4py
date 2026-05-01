@@ -30,6 +30,7 @@ def extract_next_links(url, resp):
         return output_links
 
     try:
+        # record stats
         record_page(url, resp.raw_response.content)
         write_report()
 
@@ -58,12 +59,14 @@ def is_valid(url):
 
         domain = parsed.netloc.lower()
 
+        # restrict to allowed domains
         if not any(domain == allowed or domain.endswith("." + allowed)
                    for allowed in ALLOWED_DOMAINS):
             return False
 
         path = parsed.path.lower()
 
+        # block non-html files
         if re.match(
             r".*\.(css|js|bmp|gif|jpe?g|ico"
             + r"|png|tiff?|mid|mp2|mp3|mp4"
@@ -79,6 +82,7 @@ def is_valid(url):
 
         lowered = url.lower()
 
+        # avoid traps
         trap_words = [
             "calendar",
             "ical",
@@ -94,9 +98,11 @@ def is_valid(url):
         if any(word in lowered for word in trap_words):
             return False
 
-         if "?" in url and url.count("=") > 2:
-            return False   
+        # avoid too many query params
+        if "?" in url and url.count("=") > 2:
+            return False
 
+        # avoid deep/repetitive paths
         parts = [p for p in path.split("/") if p]
 
         if len(parts) > 12:
