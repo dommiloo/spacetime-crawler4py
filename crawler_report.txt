@@ -1,0 +1,76 @@
+1. Unique pages found:
+182
+
+2. Longest page by word count:
+http://seal.ics.uci.edu/publications.html, 4892 words
+
+3. Top 50 words:
+software, 801
+ics, 459
+research, 420
+uci, 406
+engineering, 388
+students, 381
+us, 363
+access, 338
+learning, 306
+student, 293
+irvine, 279
+dataset, 274
+computer, 239
+faculty, 237
+data, 235
+graduate, 226
+science, 226
+systems, 223
+information, 221
+international, 213
+career, 210
+undergraduate, 209
+garcia, 201
+joshua, 199
+project, 194
+informatics, 194
+malek, 191
+android, 188
+datasets, 184
+machine, 183
+sam, 182
+location, 178
+paper, 178
+conference, 172
+restricted, 171
+uc, 166
+content, 163
+accepted, 163
+program, 160
+pdf, 159
+community, 157
+security, 154
+bren, 153
+follow, 150
+donald, 149
+contact, 146
+university, 146
+analysis, 146
+view, 144
+resources, 141
+
+4. Subdomains:
+accessibility.ics.uci.edu, 4
+archive.ics.uci.edu, 21
+code.ics.uci.edu, 6
+create.ics.uci.edu, 3
+ics.uci.edu, 75
+informatics.ics.uci.edu, 4
+jgarcia.ics.uci.edu, 36
+malek.ics.uci.edu, 1
+mswe.ics.uci.edu, 4
+oai.ics.uci.edu, 1
+seal.ics.uci.edu, 7
+stat.ics.uci.edu, 1
+stat.uci.edu, 1
+tutoring.ics.uci.edu, 5
+www.ics.uci.edu, 10
+www.informatics.uci.edu, 1
+www.stat.uci.edu, 2
